@@ -34,3 +34,24 @@ class Solution{
             return ans;
         }
 }
+
+
+
+//Approach2
+
+
+class Solution{
+    public:
+     vector<int> leadersInArray(vector<int>& nums){
+        int n=nums.size();
+        int max=nums[n-1];
+        vector<int> ans;
+        for(int i=n;i>=0;i--){
+            if(nums[i]>=max){
+                ans.push_back(nums[i]);
+                max=nums[i];
+            }
+        }
+        return ans;
+}
+}
