@@ -7,4 +7,3 @@ int findSmallest(vector<int>& arr) {
         minVal = min(minVal, arr[i]);
     }
     return minVal;
-}
