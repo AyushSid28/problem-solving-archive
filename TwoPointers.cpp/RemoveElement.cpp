@@ -14,13 +14,12 @@
 // Note that the five elements can be returned in any order.
 // It does not matter what you leave beyond the returned k (hence they are underscores).
  
-
 class Solution {
     public:
         int removeElement(vector<int>& nums, int val) {
             int slow=0;
             for(int fast=0;fast<nums.size();fast++){
-                if(fast!=val){
+                if(nums[fast]!=val){
                     nums[slow]=nums[fast];
                     slow++;
                 }
