@@ -16,38 +16,54 @@
  
 
 
-class Solution {
-    public:
-        bool detectCapitalUse(string word) {
+// class Solution {
+//     public:
+//         bool detectCapitalUse(string word) {
             
-                if(isupper(word[0]) && isupper(word[1])){
-                    for(int i=2;i<word.size();i++){
-                        if(!isupper(word[i])){
-                            return false;
-                        }
+//                 if(isupper(word[0]) && isupper(word[1])){
+//                     for(int i=2;i<word.size();i++){
+//                         if(!isupper(word[i])){
+//                             return false;
+//                         }
                        
-                    }
-                    return true;
-                }
-                else if(isupper(word[0]) && !isupper(word[1])){
-                     for(int i=2;i<word.size();i++){
-                        if(isupper(word[i])){
-                            return false;
-                        }
-                    }
-                    return true;
-                }
+//                     }
+//                     return true;
+//                 }
+//                 else if(isupper(word[0]) && !isupper(word[1])){
+//                      for(int i=2;i<word.size();i++){
+//                         if(isupper(word[i])){
+//                             return false;
+//                         }
+//                     }
+//                     return true;
+//                 }
                 
-                else{
-                    for(int i=0;i<word.size();i++){
-                        if(isupper(word[i])){
-                            return false;
-                        }
-                    }
-                    return true;
+//                 else{
+//                     for(int i=0;i<word.size();i++){
+//                         if(isupper(word[i])){
+//                             return false;
+//                         }
+//                     }
+//                     return true;
     
-                }
-                return false;
+//                 }
+//                 return false;
             
-        }
-    };
+//         }
+//     };
+
+
+    class Solution {
+        public:
+            bool detectCapitalUse(string word) {
+                int upperCount=0;
+                for(char ch:word){
+                    if(isupper(ch)) upperCount++;
+        
+                }
+                return upperCount==1 && isupper(word[0]) || upperCount==word.size() || upperCount==0;
+        
+        
+                
+            }
+        };
