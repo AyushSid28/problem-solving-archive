@@ -1,4 +1,4 @@
-Remove duplicate characters from string, keeping first occurrence only.
+//Remove duplicate characters from string, keeping first occurrence only.
 
 
 string removeDuplicates(string s) {
