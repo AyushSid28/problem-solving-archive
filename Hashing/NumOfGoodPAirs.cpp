@@ -13,7 +13,6 @@
 
 // Input: nums = [1,1,1,1]
 // Output: 6
-// Explanation: Each pair in the array are good.
 
 
 
