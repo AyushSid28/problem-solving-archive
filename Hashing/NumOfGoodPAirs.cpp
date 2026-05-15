@@ -24,7 +24,7 @@ class Solution {
             unordered_map<int, int> count;
             int pairs = 0;
             for (int x : nums) {
-                pairs += count[x];  // current element pairs with all previous same elements
+                pairs += count[x]; 
                 count[x]++;
             }
             return pairs;
